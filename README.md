@@ -128,7 +128,7 @@ cd CRUD-Test-1
 
 Renommer `.env.exemple` en `.env`
 
-Ajoutez vos variables `.env` :
+Ajoutez les variables d’environnement dans le fichier `.env` :
 
 ```bash
 # Database MongoDB
