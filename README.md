@@ -129,6 +129,7 @@ cd CRUD-Test-1
 Renommer `.env.exemple` en `.env`
 
 ```bash
+# Database MongoDB
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myDatabase?retryWrites=true&w=majority
 ```
 
