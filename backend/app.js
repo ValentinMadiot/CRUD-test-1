@@ -3,41 +3,49 @@
 //*--------------------------------------------------------------------------------
 
 //* APPEL/IMPORT DOTENV
-const dotenv = require('dotenv')
+const dotenv = require("dotenv");
 
 //* DECLARATION DE DOTENV
-dotenv.config()
+dotenv.config();
 
 //* APPEL/IMPORT EXPRESS
-const express = require('express')
+const express = require("express");
 
 //* DECLARER APP
-const app = express()
+const app = express();
 
 //* APPEL/IMPORT CORS
-const cors = require('cors')
+const cors = require("cors");
 
 //* LIBRAIRIE BODY-PARSER OBSOLETE
 // const bodyparser = require('body-parser')
 
 //* IMPORT DES FONCTIONS
-const {createProduct, getProducts, getProduct, updateProduct, deleteProduct} = require('./models/Product')
+const {
+  createProduct,
+  getProducts,
+  getProduct,
+  updateProduct,
+  deleteProduct,
+} = require("./models/Product");
 
 //* DECLARER LE PORT
-const port = 3000
+const port = 8080;
 
 //* LIRE & INDIQUER LE PORT QUI EST LU
-app.listen(port, () => {console.log("Server listening on port " + port);})
+app.listen(port, () => {
+  console.log("Server listening on port " + port);
+});
 
 //*--------------------------------------------------------------------------------
 //*---------------------------------- MIDDLEWARE ----------------------------------
 //*--------------------------------------------------------------------------------
 
 //* UTILISATION DE CORS
-app.use(cors())
+app.use(cors());
 
 //* UTILISATION DE EXPRESS
-app.use(express.json())
+app.use(express.json());
 
 //*--------------------------------------------------------------------------------
 //*------------------------------------ ROUTES ------------------------------------
@@ -45,16 +53,16 @@ app.use(express.json())
 
 //!================================================================================
 
-//* GET /api/products => RETOURNE TOUS LES PRODUITS 
+//* GET /api/products => RETOURNE TOUS LES PRODUITS
 
 //=================================================================================
-//? METHODE .THEN & .CATCH 
+//? METHODE .THEN & .CATCH
 //=================================================================================
 app.get("/api/products", (req, res) => {
   getProducts(req.body)
     .then((products) => res.send({ products: products }))
-    .catch((error) => console.error("Error: ", error))
-})
+    .catch((error) => console.error("Error: ", error));
+});
 
 //=================================================================================
 //? METHODE ASYNC & AWAIT + TRY & CATCH
@@ -73,16 +81,16 @@ app.get("/api/products", (req, res) => {
 //* GET /api/products/:id => RETOURNE UN PRODUIT AVEC SON ID
 
 //=================================================================================
-//? METHODE .THEN & .CATCH 
+//? METHODE .THEN & .CATCH
 //=================================================================================
 app.get("/api/products/:id", (req, res) => {
   // ==============================================================
-  const productId = req.params.id // const {productId} = req.params
+  const productId = req.params.id; // const {productId} = req.params
   // ==============================================================
   getProduct(productId)
     .then((product) => res.send({ product: product }))
-    .catch((error) => console.error("Error: ", error))
-})
+    .catch((error) => console.error("Error: ", error));
+});
 
 //=================================================================================
 //? METHODE ASYNC & AWAIT + TRY & CATCH
@@ -104,13 +112,13 @@ app.get("/api/products/:id", (req, res) => {
 //* POST /api/products => CREER UN PRODUIT DANS LA BASE DE DONNEES
 
 //=================================================================================
-//? METHODE .THEN & .CATCH 
+//? METHODE .THEN & .CATCH
 //=================================================================================
 app.post("/api/products", (req, res) => {
   createProduct(req.body)
     .then((newProduct) => res.send({ product: newProduct }))
-    .catch((error) => console.error("Error: ", error))
-})
+    .catch((error) => console.error("Error: ", error));
+});
 
 //=================================================================================
 //? METHODE ASYNC & AWAIT + TRY & CATCH
@@ -129,14 +137,14 @@ app.post("/api/products", (req, res) => {
 //* PUT /api/products/:id => MODIFIER UN PRODUIT
 
 //=================================================================================
-//? METHODE .THEN & .CATCH 
+//? METHODE .THEN & .CATCH
 //=================================================================================
 app.put("/api/products/:id", (req, res) => {
-  const product = req.params.id // const {product} = req.params
+  const product = req.params.id; // const {product} = req.params
   updateProduct(product, req.body)
-    .then(() => res.send({ message: 'Modified!' }))
-    .catch((error) => console.error("Error: ", error))
-})
+    .then(() => res.send({ message: "Modified!" }))
+    .catch((error) => console.error("Error: ", error));
+});
 
 //=================================================================================
 //? METHODE ASYNC & AWAIT + TRY & CATCH
@@ -157,16 +165,16 @@ app.put("/api/products/:id", (req, res) => {
 //* DELETE /api/products => SUPPRIMER UN PRODUIT
 
 //=================================================================================
-//? METHODE .THEN & .CATCH 
+//? METHODE .THEN & .CATCH
 //=================================================================================
 app.delete("/api/products/:id", (req, res) => {
-  const productId = req.params.id // const {product} = req.params
+  const productId = req.params.id; // const {product} = req.params
   deleteProduct(productId)
     .then(() => {
-      return res.send({ message: 'Deleted!' })
+      return res.send({ message: "Deleted!" });
     })
-    .catch((error) => console.error("Error: ", error))
-})
+    .catch((error) => console.error("Error: ", error));
+});
 
 //=================================================================================
 //? METHODE ASYNC & AWAIT + TRY & CATCH

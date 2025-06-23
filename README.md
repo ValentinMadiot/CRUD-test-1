@@ -12,24 +12,25 @@
 
 ## <br /> <a name="introduction">🎨 Introduction</a>
 
-Ce projet est un exercice de type _Fullstack Quiz_ visant à tester vos compétences en développement d’une API REST avec Node.js, Express et MongoDB.  
-L’objectif : créer un backend capable de gérer un catalogue de produits via les opérations CRUD.
+Ce projet est un exercice Fullstack conçu pour tester la maîtrise des opérations CRUD à travers la création d’une API REST.
 
-Une application frontend fournie permet de tester automatiquement l’API, en affichant un mot secret une fois tous les tests validés.
+Il permet la gestion d’un catalogue de produits à l’aide de Node.js, Express et MongoDB, via un backend structuré.
+
+Une interface frontend intégrée permet de tester automatiquement les routes et d’obtenir un mot secret une fois tous les tests réussis.
 
 ## <br /> <a name="technologies">⚙️ Technologies</a>
 
 - **Backend** : Node.js, Express
-- **Base de données** : MongoDB (via Mongoose)
+- **Base de données** : MongoDB (Mongoose)
 - **Langage** : JavaScript
 
 ## <br /> <a name="fonctionnalités">🎯 Fonctionnalités</a>
 
-&nbsp;&nbsp;&nbsp; ✅ &nbsp; Création de produit <br />
-&nbsp;&nbsp;&nbsp; 📄 &nbsp; Lecture d’un ou plusieurs produits <br />
-&nbsp;&nbsp;&nbsp; ✏️ &nbsp; Mise à jour d’un produit <br />
-&nbsp;&nbsp;&nbsp; ❌ &nbsp; Suppression d’un produit <br />
-&nbsp;&nbsp;&nbsp; 🔐 &nbsp; API REST conforme aux spécifications requises pour test automatique <br />
+- Création de produit
+- Lecture d’un ou plusieurs produits
+- Mise à jour d’un produit
+- Suppression d’un produit
+- API REST conforme aux spécifications des tests automatiques
 
 ## <br /> <a name="schéma">🧱 Schéma & Routes</a>
 
@@ -108,10 +109,13 @@ mongoose.Schema({
 
 ### ✅ Prérequis
 
-- 🛠️ **[Git](https://git-scm.com/)**
-- 🔧 **[Node.js](https://nodejs.org/fr/)**
-- 📦 **[npm](https://www.npmjs.com/)**
-- 🍃 **[MongoDB](https://www.mongodb.com/)** (Atlas ou local)
+- [Git](https://git-scm.com/) &nbsp;—&nbsp; Système de gestion de versions
+- [Node.js](https://nodejs.org/fr) &nbsp;—&nbsp; Exécuteur local de scripts JavaScript
+- [npm](https://www.npmjs.com/) &nbsp;—&nbsp; Gestionnaire de paquets JavaScript
+- [MongoDB](https://www.mongodb.com/) — Base de données NoSQL
+- [Google Chrome](https://www.google.com/) &nbsp;—&nbsp; Navigateur moderne
+- [Visual Studio Code](https://code.visualstudio.com/) &nbsp;—&nbsp; Éditeur de code
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) &nbsp;—&nbsp; Extension VS Code
 
 ### 📥 Clonage
 
@@ -120,31 +124,9 @@ git clone https://github.com/ValentinMadiot/CRUD-Test-1
 cd CRUD-Test-1
 ```
 
-### 📦 Installation des dépendances
-
-### Backend
-
-```bash
-cd backend
-npm install
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-```
-
 ### 🔧 Configuration de l'environnement
 
-Dans le dossier backend, renommer le fichier .env.example en .env :
-
-```bash
-mv .env.example .env
-```
-
-Ajoutez l'URI MongoDB dans le fichier .env :
+Renommer `.env.exemple` en `.env`
 
 ```bash
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myDatabase?retryWrites=true&w=majority
@@ -155,23 +137,27 @@ MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myDatabase?
 ### Backend
 
 ```bash
+cd backend
+npm install
 npm start
 ```
 
-Backend disponible sur : `http://localhost:3000`
+Backend disponible sur : `http://localhost:8080`
 
 ### Frontend
 
 ```bash
+cd frontend
+npm install
 npm start
 ```
 
-Frontend disponible sur : `http://localhost:4200`
+Frontend disponible sur : `http://localhost:8081`
 
 ## <br /> <a name="utilisation">🧪 Utilisation & Tests</a>
 
 1. Lancez votre serveur API avec `npm start` dans le dossier backend
 2. Lancez l'application frontend avec `npm start` dans le dossier frontend
-3. Indiquez le port utilisé par votre API (par défaut : `3000`)
-4. Cliquez sur **TEST ROUTES** pour lancer les tests
-5. Tous les tests doivent passer pour révéler le mot secret
+3. Indiquez le port utilisé par votre API (par défaut : `8080`)
+4. Cliquez sur **TEST ROUTES** pour démarrer la vérification
+5. Tous les tests doivent réussir pour révéler le mot secret
