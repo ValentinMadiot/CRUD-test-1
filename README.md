@@ -12,9 +12,9 @@
 
 ## <br /> <a name="introduction">🎨 Introduction</a>
 
-Ce projet est un exercice Fullstack conçu pour tester la maîtrise des opérations CRUD à travers la création d’une API REST.
+Ce projet est un exercice **Fullstack** conçu pour tester la maîtrise des opérations **CRUD** à travers la création d’une **API REST**.
 
-Il permet la gestion d’un catalogue de produits à l’aide de Node.js, Express et MongoDB, via un backend structuré.
+Il permet la gestion d’un catalogue de produits à l’aide de **Node.js**, **Express** et **MongoDB**, via un backend structuré.
 
 Une interface frontend intégrée permet de tester automatiquement les routes et d’obtenir un mot secret une fois tous les tests réussis.
 
@@ -127,6 +127,8 @@ cd CRUD-Test-1
 ### 🔧 Configuration de l'environnement
 
 Renommer `.env.exemple` en `.env`
+
+Ajoutez vos variables `.env` :
 
 ```bash
 # Database MongoDB
