@@ -117,7 +117,7 @@ mongoose.Schema({
 - [Visual Studio Code](https://code.visualstudio.com/) &nbsp;—&nbsp; Éditeur de code
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) &nbsp;—&nbsp; Extension VS Code
 
-### 📥 Clonage
+### 📥 Cloner le projet
 
 ```bash
 git clone https://github.com/ValentinMadiot/CRUD-Test-1
@@ -135,7 +135,7 @@ Ajoutez vos variables `.env` :
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myDatabase?retryWrites=true&w=majority
 ```
 
-### ▶️ Lancement du serveur
+### ▶️ Lancer le projet
 
 ### Backend
 
